@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Jabulile | Portfolio</title>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;600&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Internal CSS for link styling -->
+  <style>
+    /* Project links styling */
+    #projects a {
+      color: #fff; /* White text so it shows against purple background */
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    #projects a:hover {
+      color: #ff69b4; /* Pink when hovered */
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-logo">
+      <img src="assets/logo.png" alt="Jabulile Logo" class="logo-img" />
+    </div>
+
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Main Content -->
+  <div class="background-overlay">
+    
+    <!-- Intro -->
+    <section id="about" class="intro">
+      <div class="profile">
+        <img src="assets/me.jpg" alt="Jabulile Msibi" class="profile-pic" />
+        <div class="intro-text">
+          <h1>Hi, I'm <span class="name-highlight:pink">Jabulile Msibi</span> </h1>
+          <p>A passionate Software developer turning code into art and into life changing solutions. Until code becomes a beautiful experience.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects">
+      <h2><i class="fas fa-laptop-code"></i> Projects</h2>
+      <ul>
+        <li>
+          <strong>
+            Portfolio Website</a>
+          </strong>: This one!
+        </li>
+        <li>
+          <strong>
+            <a href="https://weather214c0a.netlify.app/" target="_blank" rel="noopener">Weather App</a>
+          </strong>: A simulation weather App, no API key implemented yet
+        </li>
+        <li>
+          <strong>
+            <a href="https://jaysecure.netlify.app/" target="_blank" rel="noopener">Antivirus simulator</a>
+          </strong>: Just a simulator which simulate the file scanning process
+        </li>
+        <li>
+          <strong>
+            <a href="https://cheerful-poem-maker-9d247d.netlify.app/" target="_blank" rel="noopener">AI poem generator</a>
+          </strong>: Has a beautiful UI and generates poems using AI
+        </li>
+      </ul> 
+    </section>
+
+    <!-- Skills -->
+<section id="skills">
+  <h2><i class="fas fa-tools"></i> Skills</h2>
+  <h3>🛠️ Tech Stack</h3>
+  <ul>
+    <li><strong>Frontend:</strong> HTML, CSS, JavaScript, TypeScript, Tailwind, React</li>
+    <li><strong>Backend:</strong> Python, Java, Node.js</li>
+    <li><strong>Databases:</strong> MySQL, MongoDB, PostgreSQL</li>
+    <li><strong>Other Tools:</strong> Git, GitHub, Docker</li>
+  </ul>
+</section>
+
+
+    <!-- Contact -->
+    <section id="contact">
+      <h2><i class="fas fa-envelope"></i> Contact Me</h2>
+      <form action="https://formspree.io/f/movneele" method="POST">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+        <button type="submit">Send</button>
+      </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <p>
+        © 2025 Jabulile Msibi •
+        <a href="mailto:jabulilemsibi184@gmail.com" aria-label="Email me">
+          <i class="fas fa-envelope" aria-hidden="true"></i>
+        </a> •
+        <a href="https://github.com/Madam-Supremacy" target="_blank" rel="noopener" aria-label="GitHub profile">
+          <i class="fab fa-github" aria-hidden="true"></i>
+        </a> •
+        <a href="https://www.linkedin.com/in/jabulile-msibi-706aa8367/" target="_blank" rel="noopener" aria-label="LinkedIn profile">
+          <i class="fab fa-linkedin" aria-hidden="true"></i>
+        </a>
+      </p>
+    </footer>
+
+  </div>
+</body>
+</html>
