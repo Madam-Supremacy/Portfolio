@@ -14,20 +14,7 @@
   <!-- Styles -->
   <link rel="stylesheet" href="style.css" />
 
-  <!-- Internal CSS for link styling -->
-  <style>
-    /* Project links styling */
-    #projects a {
-      color: #fff; /* White text so it shows against purple background */
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    #projects a:hover {
-      color: #ff69b4; /* Pink when hovered */
-      text-decoration: underline;
-    }
-  </style>
+  
 </head>
 <body>
 
@@ -53,32 +40,71 @@
       <div class="profile">
         <img src="assets/me.jpg" alt="Jabulile Msibi" class="profile-pic" />
         <div class="intro-text">
-          <h1>Hi, I'm <span class="name-highlight:pink">Jabulile Msibi</span> </h1>
-          <p>A passionate Software developer turning code into art and into life changing solutions. Until code becomes a beautiful experience.</p>
+          <h1 class="fade-down">Hi, I'm <span class="pink-glow">Jabulile Msibi</span></h1>
+          <p class="fade-up">A passionate Software developer turning code into art and into life-changing solutions. Until code becomes a beautiful experience.</p>
         </div>
       </div>
     </section>
 
-    <!-- Projects -->
     <section id="projects">
-    <h2><i class="fas fa-laptop-code"></i> Projects</h2>
-    <div class="project-grid">
-      <div class="project-card">
-        <h3>Weather App</h3>
-        <p>A simulation weather App, focusing on UI/UX flow before API integration.</p>
-        <a href="https://weather214c0a.netlify.app/" target="_blank">View Project →</a>
+      <h2><i class="fas fa-laptop-code"></i> Projects</h2>
+      <div class="project-grid">
+        
+        <div class="project-card">
+          <h3>Weather App</h3>
+          <p>A simulation weather App focusing on UI flow and responsive design.</p>
+          <div class="project-tech">
+            <span>HTML</span><span>CSS</span><span>JavaScript</span>
+          </div>
+          <a href="https://weather214c0a.netlify.app/" target="_blank">View Project →</a>
+        </div>
+
+        <div class="project-card">
+          <h3>Antivirus Simulator</h3>
+          <p>Simulates file scanning processes and security logic interfaces.</p>
+          <div class="project-tech">
+            <span>React</span><span>Node.js</span><span>Tailwind</span>
+          </div>
+          <a href="https://jaysecure.netlify.app/" target="_blank">View Project →</a>
+        </div>
+
+        <div class="project-card">
+          <h3>AI Poem Generator</h3>
+          <p>Generates creative poetry using AI with a focus on modern aesthetic UI.</p>
+          <div class="project-tech">
+            <span>TypeScript</span><span>React</span><span>AI API</span>
+          </div>
+          <a href="https://cheerful-poem-maker-9d247d.netlify.app/" target="_blank">View Project →</a>
+        </div>
+
+        <div class="project-card">
+          <h3>E-Commerce Dashboard</h3>
+          <p>An administrative interface to manage products, sales, and user data.</p>
+          <div class="project-tech">
+            <span>React</span><span>PostgreSQL</span><span>Chart.js</span>
+          </div>
+          <a href="#" target="_blank">Coming Soon →</a>
+        </div>
+
+        <div class="project-card">
+          <h3>Task Management Tool</h3>
+          <p>A productivity app featuring drag-and-drop tasks and deadline tracking.</p>
+          <div class="project-tech">
+            <span>Node.js</span><span>MongoDB</span><span>Express</span>
+          </div>
+          <a href="#" target="_blank">Coming Soon →</a>
+        </div>
+
+        <div class="project-card">
+          <h3>Fitness Tracker</h3>
+          <p>A mobile-first web app to log workouts and visualize progress over time.</p>
+          <div class="project-tech">
+            <span>Python</span><span>Django</span><span>Bootstrap</span>
+          </div>
+          <a href="#" target="_blank">Coming Soon →</a>
+        </div>
+
       </div>
-      <div class="project-card">
-        <h3>Antivirus Simulator</h3>
-        <p>A functional simulation of file scanning processes and security logic.</p>
-        <a href="https://jaysecure.netlify.app/" target="_blank">View Project →</a>
-      </div>
-      <div class="project-card">
-        <h3>AI Poem Generator</h3>
-        <p>A beautiful UI leveraging AI to generate creative poetry on demand.</p>
-        <a href="https://cheerful-poem-maker-9d247d.netlify.app/" target="_blank">View Project →</a>
-      </div>
-    </div>
   </section>
 
   <section id="skills">
