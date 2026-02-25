@@ -88,10 +88,6 @@ body {
   display: inline-block !important;
   font-weight: 800 !important;
   text-shadow: 0 0 15px rgba(255, 110, 199, 0.6) !important;
-  background: linear-gradient(to right, #ff6ec7, #ff1493) !important;
-  -webkit-background-clip: text !important;
-  background-clip: text !important;
-  -webkit-text-fill-color: transparent !important;
 }
 
 #typewriter {
@@ -100,7 +96,7 @@ body {
   color: #ddd;
   max-width: 700px;
   margin: 0 auto;
-  border-right: 3px solid var(--secondary); /* The blinking cursor */
+  border-right: 3px solid var(--secondary);
   white-space: pre-wrap;
   animation: blink 0.7s infinite;
 }
@@ -116,9 +112,9 @@ body {
 }
 
 /* =========================================
-   4. PROJECTS & SKILLS
+   4. PROJECTS (PINK LINKS FIX)
    ========================================= */
-#projects, #skills { padding: 80px 10%; max-width: 1200px; margin: 0 auto; }
+#projects { padding: 80px 10%; max-width: 1200px; margin: 0 auto; }
 
 h2 { font-size: 2.2rem; color: var(--primary); margin-bottom: 40px; text-align: center; }
 
@@ -135,19 +131,50 @@ h2 { font-size: 2.2rem; color: var(--primary); margin-bottom: 40px; text-align: 
   padding: 30px;
   transition: 0.3s;
   backdrop-filter: blur(10px);
+  display: flex;
+  flex-direction: column;
 }
 
 .project-card:hover { transform: translateY(-10px); border-color: var(--secondary); }
+
+.project-card h3 { color: var(--primary); margin-bottom: 15px; }
+
+.project-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 15px 0 20px 0;
+}
 
 .project-tech span {
   font-size: 0.75rem;
   background: rgba(77, 208, 225, 0.1);
   color: var(--accent);
-  padding: 4px 10px;
+  padding: 4px 12px;
   border-radius: 20px;
   border: 1px solid rgba(77, 208, 225, 0.3);
-  margin-right: 5px;
 }
+
+/* THE PINK LINK FIX */
+.project-link {
+  color: #ff6ec7 !important; /* Force Pink */
+  text-decoration: none;
+  font-weight: 800;
+  margin-top: auto; /* Pushes link to bottom of card */
+  transition: 0.3s;
+  display: inline-block;
+  font-size: 1rem;
+}
+
+.project-link:hover {
+  text-shadow: 0 0 10px rgba(255, 110, 199, 0.8);
+  transform: translateX(5px); /* Moves it slightly to the right */
+}
+
+/* =========================================
+   5. SKILLS & CONTACT
+   ========================================= */
+#skills { padding: 80px 10%; text-align: center; }
 
 .skill-tags { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; }
 
@@ -161,9 +188,6 @@ h2 { font-size: 2.2rem; color: var(--primary); margin-bottom: 40px; text-align: 
 
 .skill-tags span:hover { background: var(--accent); color: var(--bg-dark); }
 
-/* =========================================
-   5. CONTACT & FOOTER
-   ========================================= */
 #contact { max-width: 600px; margin: 60px auto; padding: 0 20px; text-align: center; }
 
 form input, form textarea {
