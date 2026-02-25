@@ -5,20 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Jabulile | Portfolio</title>
 
-  <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
-  <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;600&display=swap" rel="stylesheet">
 
-  <!-- Styles -->
   <link rel="stylesheet" href="style.css" />
-
-  
 </head>
 <body>
 
-  <!-- Navigation -->
   <nav class="navbar">
     <div class="nav-logo">
       <img src="assets/logo.png" alt="Jabulile Logo" class="logo-img" />
@@ -32,16 +26,14 @@
     </ul>
   </nav>
 
-  <!-- Main Content -->
   <div class="background-overlay">
     
-    <!-- Intro -->
     <section id="about" class="intro">
       <div class="profile">
         <img src="assets/me.jpg" alt="Jabulile Msibi" class="profile-pic" />
         <div class="intro-text">
           <h1 class="fade-down">Hi, I'm <span class="pink-glow">Jabulile Msibi</span></h1>
-          <p class="fade-up">A passionate Software developer turning code into art and into life-changing solutions. Until code becomes a beautiful experience.</p>
+          <p id="typewriter" class="fade-up"></p> 
         </div>
       </div>
     </section>
@@ -72,18 +64,18 @@
           <h3>AI Poem Generator</h3>
           <p>Generates creative poetry using AI with a focus on modern aesthetic UI.</p>
           <div class="project-tech">
-            <span>JavaScript</span><span>html</span><span>CSS</span><span>React</span><span>AI API</span>
+            <span>TypeScript</span><span>React</span><span>AI API</span>
           </div>
           <a href="https://cheerful-poem-maker-9d247d.netlify.app/" target="_blank">View Project →</a>
         </div>
 
         <div class="project-card">
-          <h3>Booking system</h3>
-          <p>An administrative interface to manage resources, and make bookings.</p>
+          <h3>E-Commerce Dashboard</h3>
+          <p>An administrative interface to manage products, sales, and user data.</p>
           <div class="project-tech">
-            <span>Java</span><span>html</span><span>CSS</span><span>JavaScript</span><span>PostgreSQL</span>
+            <span>React</span><span>PostgreSQL</span><span>Chart.js</span>
           </div>
-          <a href="https://booking-system-ui.netlify.app/" target="_blank">View Project →</a>
+          <a href="#" target="_blank">Coming Soon →</a>
         </div>
 
         <div class="project-card">
@@ -121,34 +113,42 @@
     </div>
   </section>
 
-
-    <!-- Contact -->
     <section id="contact">
       <h2><i class="fas fa-envelope"></i> Contact Me</h2>
       <form action="https://formspree.io/f/movneele" method="POST">
         <input type="text" name="name" placeholder="Your Name" required />
         <input type="email" name="email" placeholder="Your Email" required />
         <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
-        <button type="submit">Send</button>
+        <button type="submit">Send <i class="fas fa-paper-plane"></i></button>
       </form>
     </section>
 
-    <!-- Footer -->
     <footer>
       <p>
         © 2025 Jabulile Msibi •
-        <a href="mailto:jabulilemsibi184@gmail.com" aria-label="Email me">
-          <i class="fas fa-envelope" aria-hidden="true"></i>
-        </a> •
-        <a href="https://github.com/Madam-Supremacy" target="_blank" rel="noopener" aria-label="GitHub profile">
-          <i class="fab fa-github" aria-hidden="true"></i>
-        </a> •
-        <a href="https://www.linkedin.com/in/jabulile-msibi-706aa8367/" target="_blank" rel="noopener" aria-label="LinkedIn profile">
-          <i class="fab fa-linkedin" aria-hidden="true"></i>
-        </a>
+        <a href="mailto:jabulilemsibi184@gmail.com"><i class="fas fa-envelope"></i></a> •
+        <a href="https://github.com/Madam-Supremacy" target="_blank"><i class="fab fa-github"></i></a> •
+        <a href="https://www.linkedin.com/in/jabulile-msibi-706aa8367/" target="_blank"><i class="fab fa-linkedin"></i></a>
       </p>
     </footer>
 
   </div>
+
+  <script>
+    const text = "A passionate Software developer turning code into art and into life-changing solutions. Until code becomes a beautiful experience.";
+    let index = 0;
+    const speed = 40; 
+
+    function typeWriter() {
+      if (index < text.length) {
+        document.getElementById("typewriter").innerHTML += text.charAt(index);
+        index++;
+        setTimeout(typeWriter, speed);
+      }
+    }
+
+    // Runs once the page loads
+    window.onload = typeWriter;
+  </script>
 </body>
 </html>

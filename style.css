@@ -62,7 +62,7 @@ body {
 .nav-links a:hover { color: var(--secondary); }
 
 /* =========================================
-   3. INTRO / HERO (The Pink Glow Fix)
+   3. INTRO / HERO & TYPEWRITER
    ========================================= */
 .intro {
   padding: 100px 10%;
@@ -80,22 +80,34 @@ body {
 
 .intro h1 {
   font-size: 3.5rem;
-  margin-bottom: 10px;
-  color: #ffffff;
+  margin-bottom: 15px;
 }
 
-/* The Pink Glow - Bulletproof Version */
 .pink-glow {
-  color: #ff6ec7 !important; /* Solid pink backup */
+  color: #ff6ec7 !important; 
   display: inline-block !important;
   font-weight: 800 !important;
-  /* Glow Effect */
   text-shadow: 0 0 15px rgba(255, 110, 199, 0.6) !important;
-  /* Gradient Clipping */
   background: linear-gradient(to right, #ff6ec7, #ff1493) !important;
   -webkit-background-clip: text !important;
   background-clip: text !important;
   -webkit-text-fill-color: transparent !important;
+}
+
+#typewriter {
+  min-height: 1.6em;
+  font-size: 1.2rem;
+  color: #ddd;
+  max-width: 700px;
+  margin: 0 auto;
+  border-right: 3px solid var(--secondary); /* The blinking cursor */
+  white-space: pre-wrap;
+  animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+  0%, 100% { border-color: transparent; }
+  50% { border-color: var(--secondary); }
 }
 
 .fade-down {
@@ -103,30 +115,12 @@ body {
   animation: slideDown 1s forwards cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-.fade-up {
-  opacity: 0;
-  max-width: 700px;
-  margin: 20px auto;
-  font-size: 1.2rem;
-  color: #ddd;
-  animation: slideUp 1s forwards 0.4s ease-out;
-}
-
 /* =========================================
-   4. PROJECTS GRID
+   4. PROJECTS & SKILLS
    ========================================= */
-#projects {
-  padding: 80px 10%;
-  max-width: 1200px;
-  margin: 0 auto;
-}
+#projects, #skills { padding: 80px 10%; max-width: 1200px; margin: 0 auto; }
 
-h2 {
-  font-size: 2.2rem;
-  color: var(--primary);
-  margin-bottom: 40px;
-  text-align: center;
-}
+h2 { font-size: 2.2rem; color: var(--primary); margin-bottom: 40px; text-align: center; }
 
 .project-grid {
   display: grid;
@@ -139,74 +133,38 @@ h2 {
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 15px;
   padding: 30px;
-  transition: all 0.3s ease;
+  transition: 0.3s;
   backdrop-filter: blur(10px);
 }
 
-.project-card:hover {
-  transform: translateY(-10px);
-  border-color: var(--secondary);
-  background: rgba(255, 255, 255, 0.12);
-}
-
-.project-card h3 { color: var(--primary); margin-bottom: 15px; }
-
-.project-tech {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  margin: 15px 0 20px 0;
-}
+.project-card:hover { transform: translateY(-10px); border-color: var(--secondary); }
 
 .project-tech span {
   font-size: 0.75rem;
   background: rgba(77, 208, 225, 0.1);
   color: var(--accent);
-  padding: 4px 12px;
+  padding: 4px 10px;
   border-radius: 20px;
   border: 1px solid rgba(77, 208, 225, 0.3);
+  margin-right: 5px;
 }
 
-.project-card a {
-  color: var(--secondary);
-  text-decoration: none;
-  font-weight: bold;
-  display: inline-block;
-}
-
-.project-card a:hover { text-decoration: underline; }
-
-/* =========================================
-   5. SKILLS
-   ========================================= */
-#skills { padding: 80px 10%; text-align: center; }
-
-.skill-tags {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 12px;
-  margin-top: 20px;
-}
+.skill-tags { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; }
 
 .skill-tags span {
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.2);
-  padding: 10px 25px;
+  padding: 10px 20px;
   border-radius: 50px;
   transition: 0.3s;
 }
 
-.skill-tags span:hover {
-  background: var(--accent);
-  color: var(--bg-dark);
-  transform: translateY(-5px);
-}
+.skill-tags span:hover { background: var(--accent); color: var(--bg-dark); }
 
 /* =========================================
-   6. CONTACT & BUTTON
+   5. CONTACT & FOOTER
    ========================================= */
-#contact { max-width: 600px; margin: 80px auto; padding: 0 20px; }
+#contact { max-width: 600px; margin: 60px auto; padding: 0 20px; text-align: center; }
 
 form input, form textarea {
   width: 100%;
@@ -214,59 +172,37 @@ form input, form textarea {
   border: 1px solid rgba(255, 255, 255, 0.2);
   color: white;
   padding: 15px;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
   border-radius: 8px;
-  font-family: inherit;
 }
 
-#contact form button {
-  padding: 16px 40px;
+button {
+  padding: 15px 40px;
   background: linear-gradient(45deg, #ffd700, #ffae00);
   color: #1e003c;
   font-weight: 800;
-  text-transform: uppercase;
-  letter-spacing: 1px;
   border: none;
   border-radius: 50px;
   cursor: pointer;
   transition: 0.4s;
-  display: block;
-  margin: 20px auto;
 }
 
-#contact form button:hover {
-  background: linear-gradient(45deg, #ff6ec7, #ff1493);
-  color: #fff;
-  transform: scale(1.05);
-  box-shadow: 0 10px 20px rgba(255, 110, 199, 0.4);
-}
+button:hover { background: linear-gradient(45deg, #ff6ec7, #ff1493); color: #fff; transform: scale(1.05); }
+
+footer { padding: 40px; text-align: center; border-top: 1px solid rgba(255, 255, 255, 0.1); }
+
+footer a { color: #fff; margin: 0 10px; font-size: 1.2rem; }
 
 /* =========================================
-   7. KEYFRAMES & RESPONSIVENESS
+   6. RESPONSIVENESS
    ========================================= */
 @keyframes slideDown {
   from { opacity: 0; transform: translateY(-40px); }
   to { opacity: 1; transform: translateY(0); }
 }
 
-@keyframes slideUp {
-  from { opacity: 0; transform: translateY(40px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
 @media (max-width: 768px) {
-  .navbar {
-    flex-direction: column;
-    padding: 1.5rem 1rem;
-  }
-  
-  .nav-links {
-    margin-top: 15px;
-    gap: 15px;
-    display: flex !important; /* Forces menu visibility on mobile */
-  }
-
-  .nav-links a { font-size: 0.8rem; }
-  .intro h1 { font-size: 2.5rem; }
-  .project-grid { grid-template-columns: 1fr; }
+  .navbar { flex-direction: column; padding: 1.5rem 1rem; }
+  .nav-links { margin-top: 15px; gap: 15px; display: flex !important; }
+  .intro h1 { font-size: 2.2rem; }
 }
